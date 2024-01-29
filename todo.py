@@ -58,7 +58,9 @@ class TodoApp:
         selected_index = self.task_display.curselection()
         if selected_index:
             task_index = selected_index[0]
-            del self.todo_list[task_index]
+            task, priority = self.todo_list[task_index]
+            updated_task = f"{task} - Priority: {priority} (Completed)"
+            self.todo_list[task_index] = (updated_task, priority)
             self.update_task_display()
             messagebox.showinfo("Task Completed", "Task marked as completed!")
         else:
