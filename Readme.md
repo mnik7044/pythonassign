@@ -19,7 +19,7 @@ This repository contains a simple To-Do app created using Python with a graphica
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/mnik7044/pythonassign.git
    ```
 
 2. Navigate to the project directory:
@@ -37,8 +37,6 @@ This repository contains a simple To-Do app created using Python with a graphica
 4. Use the GUI to add, remove, and manage your tasks.
 
 ## Screenshots
-
-![Screenshot](image.png)
 
 ## License
 
