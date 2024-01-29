@@ -44,16 +44,6 @@ class TodoApp:
         messagebox.showinfo("Task Added", "Task added successfully!")
         self.task_entry.delete(0, tk.END)
 
-    def remove_task(self):
-        selected_index = self.task_display.curselection()
-        if selected_index:
-            task_index = selected_index[0]
-            del self.todo_list[task_index]
-            self.update_task_display()
-            messagebox.showinfo("Task Removed", "Task removed successfully!")
-        else:
-            messagebox.showerror("Error", "Please select a task to remove.")
-
     def mark_complete(self):
         selected_index = self.task_display.curselection()
         if selected_index:
@@ -66,10 +56,21 @@ class TodoApp:
         else:
             messagebox.showerror("Error", "Please select a task to mark as completed.")
 
+
     def update_task_display(self):
         self.task_display.delete(0, tk.END)
         for task, priority in self.todo_list:
             self.task_display.insert(tk.END, f"{task} - Priority: {priority}")
+
+    def remove_task(self):
+        selected_index = self.task_display.curselection()
+        if selected_index:
+            task_index = selected_index[0]
+            del self.todo_list[task_index]
+            self.update_task_display()
+            messagebox.showinfo("Task Removed", "Task removed successfully!")
+        else:
+            messagebox.showerror("Error", "Please select a task to remove.")
 
 if __name__ == "__main__":
     root = tk.Tk()
