@@ -44,6 +44,12 @@ class TodoApp:
         messagebox.showinfo("Task Added", "Task added successfully!")
         self.task_entry.delete(0, tk.END)
 
+    def update_task_display(self):
+        self.todo_list.sort(key=lambda task: ("High", "Medium", "Low").index(task[1]))
+        self.task_display.delete(0, tk.END)
+        for task, priority in self.todo_list:
+            self.task_display.insert(tk.END, f"{task} - Priority: {priority}")
+
     def mark_complete(self):
         selected_index = self.task_display.curselection()
         if selected_index:
@@ -55,12 +61,6 @@ class TodoApp:
             messagebox.showinfo("Task Completed", "Task marked as completed!")
         else:
             messagebox.showerror("Error", "Please select a task to mark as completed.")
-
-
-    def update_task_display(self):
-        self.task_display.delete(0, tk.END)
-        for task, priority in self.todo_list:
-            self.task_display.insert(tk.END, f"{task} - Priority: {priority}")
 
     def remove_task(self):
         selected_index = self.task_display.curselection()
