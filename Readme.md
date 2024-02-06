@@ -25,16 +25,21 @@ This repository contains a simple To-Do app created using Python with a graphica
 2. Navigate to the project directory:
 
    ```bash
-   cd PYTHON-ASSIGN
+   cd pythonassign/
    ```
+3. Install the dependencies:
 
-3. Run the app:
+    ```bash
+    pip install -requirements.txt
+    ```
+
+4. Run the app:
 
    ```bash
    python todo.py
    ```
 
-4. Use the GUI to add, remove, and manage your tasks.
+5. Use the GUI to add, remove, and manage your tasks.
 
 ## Screenshots
 
