@@ -30,7 +30,7 @@ This repository contains a simple To-Do app created using Python with a graphica
 3. Install the dependencies:
 
     ```bash
-    pip install -requirements.txt
+    pip install -r requirements.txt
     ```
 
 4. Run the app:
